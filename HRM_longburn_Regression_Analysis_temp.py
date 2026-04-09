@@ -334,22 +334,15 @@ try:
       if len(data_path) == 0:
             print("No test data file found, exiting.")
             return
-      elif len(data_path) == 1:
+      else len(data_path):
+            if len(data_path) != 1:
+               print('Multiple files found, proceed batch process for Reignition models')
+               break
             print(f"found test data file: {data_path[0]}")
             print(f"Starting to process.")
             data_ = pd.read_csv(data_path[0])
             data_input = str(data_path[0])
             result, fit_params, sim = processing(data_, R0, Rt0, data_input)
-
-      else:
-            print(f"found {len(data_path)} test data files. \n " \
-                  "Enabling batch process:")
-
-            for i in range (0, len(data_path)):
-               data_ = pd.read_csv(data_path[i])
-               data_input = str(data_path[i])
-               result, fit_params, sim = processing(data_, R0, Rt0, data_input)
-      #print(result.x, sim)
 except Exception as e:
    print(f"There was an error during the processing. The below exception arised \n {e}")
 if __name__ == "__main__":
