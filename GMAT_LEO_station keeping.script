@@ -1,0 +1,275 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2025-06-19 15:34:41
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft AlphaSat;
+GMAT AlphaSat.DateFormat = UTCGregorian;
+GMAT AlphaSat.Epoch = '01 Jan 2000 11:59:28.000';
+GMAT AlphaSat.CoordinateSystem = EarthMJ2000Eq;
+GMAT AlphaSat.DisplayStateType = Keplerian;
+GMAT AlphaSat.SMA = 7178.136999999998;
+GMAT AlphaSat.ECC = 2.559140718684224e-16;
+GMAT AlphaSat.INC = 60.00000000000001;
+GMAT AlphaSat.RAAN = 0;
+GMAT AlphaSat.AOP = 0;
+GMAT AlphaSat.TA = 0;
+GMAT AlphaSat.DryMass = 100;
+GMAT AlphaSat.Cd = 2.2;
+GMAT AlphaSat.Cr = 1.8;
+GMAT AlphaSat.DragArea = 0.25;
+GMAT AlphaSat.SRPArea = 1;
+GMAT AlphaSat.SPADDragScaleFactor = 1;
+GMAT AlphaSat.SPADSRPScaleFactor = 1;
+GMAT AlphaSat.AtmosDensityScaleFactor = 1;
+GMAT AlphaSat.ExtendedMassPropertiesModel = 'None';
+GMAT AlphaSat.Thrusters = {ChemicalThruster1};
+GMAT AlphaSat.NAIFId = -10000001;
+GMAT AlphaSat.NAIFIdReferenceFrame = -9000001;
+GMAT AlphaSat.OrbitColor = Red;
+GMAT AlphaSat.TargetColor = Teal;
+GMAT AlphaSat.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT AlphaSat.CdSigma = 1e+70;
+GMAT AlphaSat.CrSigma = 1e+70;
+GMAT AlphaSat.Id = 'SatId';
+GMAT AlphaSat.Attitude = CoordinateSystemFixed;
+GMAT AlphaSat.SPADSRPInterpolationMethod = Bilinear;
+GMAT AlphaSat.SPADSRPScaleFactorSigma = 1e+70;
+GMAT AlphaSat.SPADDragInterpolationMethod = Bilinear;
+GMAT AlphaSat.SPADDragScaleFactorSigma = 1e+70;
+GMAT AlphaSat.AtmosDensityScaleFactorSigma = 1e+70;
+GMAT AlphaSat.ModelFile = 'aura.3ds';
+GMAT AlphaSat.ModelOffsetX = 0;
+GMAT AlphaSat.ModelOffsetY = 0;
+GMAT AlphaSat.ModelOffsetZ = 0;
+GMAT AlphaSat.ModelRotationX = 0;
+GMAT AlphaSat.ModelRotationY = 0;
+GMAT AlphaSat.ModelRotationZ = 0;
+GMAT AlphaSat.ModelScale = 1;
+GMAT AlphaSat.AttitudeDisplayStateType = 'Quaternion';
+GMAT AlphaSat.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT AlphaSat.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT AlphaSat.EulerAngleSequence = '321';
+%GMAT AlphaSat.EulerAngleSequence = '321';
+
+%----------------------------------------
+%---------- Hardware Components
+%----------------------------------------
+
+Create ChemicalThruster ChemicalThruster1;
+GMAT ChemicalThruster1.CoordinateSystem = EarthMJ2000Eq;
+GMAT ChemicalThruster1.ThrustDirection1 = 1;
+GMAT ChemicalThruster1.ThrustDirection2 = 0;
+GMAT ChemicalThruster1.ThrustDirection3 = 0;
+GMAT ChemicalThruster1.DutyCycle = 1;
+GMAT ChemicalThruster1.ThrustScaleFactor = 1;
+GMAT ChemicalThruster1.DecrementMass = false;
+GMAT ChemicalThruster1.GravitationalAccel = 9.81;
+GMAT ChemicalThruster1.C1 = 100;
+GMAT ChemicalThruster1.C2 = 0;
+GMAT ChemicalThruster1.C3 = 0;
+GMAT ChemicalThruster1.C4 = 0;
+GMAT ChemicalThruster1.C5 = 0;
+GMAT ChemicalThruster1.C6 = 0;
+GMAT ChemicalThruster1.C7 = 0;
+GMAT ChemicalThruster1.C8 = 0;
+GMAT ChemicalThruster1.C9 = 0;
+GMAT ChemicalThruster1.C10 = 0;
+GMAT ChemicalThruster1.C11 = 0;
+GMAT ChemicalThruster1.C12 = 0;
+GMAT ChemicalThruster1.C13 = 0;
+GMAT ChemicalThruster1.C14 = 0;
+GMAT ChemicalThruster1.C15 = 0;
+GMAT ChemicalThruster1.C16 = 0;
+GMAT ChemicalThruster1.K1 = 273;
+GMAT ChemicalThruster1.K2 = 0;
+GMAT ChemicalThruster1.K3 = 0;
+GMAT ChemicalThruster1.K4 = 0;
+GMAT ChemicalThruster1.K5 = 0;
+GMAT ChemicalThruster1.K6 = 0;
+GMAT ChemicalThruster1.K7 = 0;
+GMAT ChemicalThruster1.K8 = 0;
+GMAT ChemicalThruster1.K9 = 0;
+GMAT ChemicalThruster1.K10 = 0;
+GMAT ChemicalThruster1.K11 = 0;
+GMAT ChemicalThruster1.K12 = 0;
+GMAT ChemicalThruster1.K13 = 0;
+GMAT ChemicalThruster1.K14 = 0;
+GMAT ChemicalThruster1.K15 = 0;
+GMAT ChemicalThruster1.K16 = 0;
+
+
+
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel LEOprop_ForceModel;
+GMAT LEOprop_ForceModel.CentralBody = Earth;
+GMAT LEOprop_ForceModel.PrimaryBodies = {Earth};
+GMAT LEOprop_ForceModel.PointMasses = {Luna, Sun};
+GMAT LEOprop_ForceModel.Drag = None;
+GMAT LEOprop_ForceModel.SRP = Off;
+GMAT LEOprop_ForceModel.RelativisticCorrection = Off;
+GMAT LEOprop_ForceModel.ErrorControl = RSSStep;
+GMAT LEOprop_ForceModel.GravityField.Earth.Degree = 4;
+GMAT LEOprop_ForceModel.GravityField.Earth.Order = 4;
+GMAT LEOprop_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT LEOprop_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT LEOprop_ForceModel.GravityField.Earth.TideModel = 'None';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator LEOprop;
+GMAT LEOprop.FM = LEOprop_ForceModel;
+GMAT LEOprop.Type = RungeKutta89;
+GMAT LEOprop.InitialStepSize = 60;
+GMAT LEOprop.Accuracy = 9.999999999999999e-12;
+GMAT LEOprop.MinStep = 0.001;
+GMAT LEOprop.MaxStep = 2700;
+GMAT LEOprop.MaxStepAttempts = 50;
+GMAT LEOprop.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Burns
+%----------------------------------------
+
+Create ImpulsiveBurn TCM1;
+GMAT TCM1.CoordinateSystem = Local;
+GMAT TCM1.Origin = Earth;
+GMAT TCM1.Axes = VNB;
+GMAT TCM1.Element1 = 0;
+GMAT TCM1.Element2 = 0;
+GMAT TCM1.Element3 = 0;
+GMAT TCM1.DecrementMass = false;
+GMAT TCM1.Isp = 273;
+GMAT TCM1.GravitationalAccel = 9.81;
+
+%----------------------------------------
+%---------- Solvers
+%----------------------------------------
+
+Create DifferentialCorrector DC;
+GMAT DC.ShowProgress = true;
+GMAT DC.ReportStyle = Normal;
+GMAT DC.ReportFile = 'DifferentialCorrectorDC.data';
+GMAT DC.MaximumIterations = 25;
+GMAT DC.DerivativeMethod = ForwardDifference;
+GMAT DC.Algorithm = NewtonRaphson;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.001764705882352941 0 ];
+GMAT DefaultOrbitView.Size = [ 0.5 0.4499396863691194 ];
+GMAT DefaultOrbitView.RelativeZOrder = 197;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {AlphaSat, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = On;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.001764705882352941 0.4523522316043426 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.5 0.4499396863691194 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 202;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {AlphaSat};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 200000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+Create ReportFile DVlog;
+GMAT DVlog.SolverIterations = Current;
+GMAT DVlog.UpperLeft = [ 0 0 ];
+GMAT DVlog.Size = [ 0 0 ];
+GMAT DVlog.RelativeZOrder = 0;
+GMAT DVlog.Maximized = false;
+GMAT DVlog.Filename = 'C:\Users\nivet\OTV\Orbital Mechanics\GMAT\DeltaV_Tracking.txt';
+GMAT DVlog.Precision = 16;
+GMAT DVlog.Add = {AlphaSat.ElapsedDays, DeltaV};
+GMAT DVlog.WriteHeaders = true;
+GMAT DVlog.LeftJustify = On;
+GMAT DVlog.ZeroFill = Off;
+GMAT DVlog.FixedWidth = true;
+GMAT DVlog.Delimiter = ' ';
+GMAT DVlog.ColumnWidth = 23;
+GMAT DVlog.WriteReport = true;
+
+%----------------------------------------
+%---------- Arrays, Variables, Strings
+%----------------------------------------
+Create Variable DeltaV;
+GMAT DeltaV = 0;
+
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+
+While 'While ElapsedDays < 365' AlphaSat.ElapsedDays < 365
+   % Propagate one day
+   Propagate LEOprop(AlphaSat) {AlphaSat.ElapsedSecs = 86400};
+   
+   
+   % Check RMAG bounds (6777.1 6779.1 km)
+   If AlphaSat.Earth.RMAG < 7177.5 | AlphaSat.Earth.RMAG > 7178.5
+      % Propagate to periapsis (argument of latitude = 0)
+      Propagate 'Prop To Periapsis' LEOprop(AlphaSat) {AlphaSat.Earth.Periapsis};
+      % Capture velocity before the burn
+      Target 'Raise Orbit' DC {SolveMode = Solve, ExitMode = DiscardAndContinue, ShowProgressWindow = true};
+         Vary 'Vary TCM1.V' DC(TCM1.Element1 = 0, {Perturbation = 0.001, Lower = -0.01, Upper = 0.01, MaxStep = 0.005, AdditiveScaleFactor = 0.0, MultiplicativeScaleFactor = 1.0});
+         Maneuver 'Apply TCM1' TCM1(AlphaSat);
+         Propagate 'Prop to Apoapsis' LEOprop(AlphaSat) {AlphaSat.Earth.Apoapsis};
+         Achieve 'Achieve RMAG' DC(AlphaSat.Earth.RMAG = 7178.137, {Tolerance = 0.1});
+      EndTarget;  % For targeter DC
+      GMAT DeltaV = abs(TCM1.Element1) + abs(TCM1.Element2) + abs(TCM1.Element3) + DeltaV;
+   EndIf;
+EndWhile;
+
+% Report Delta-V and Epoch
+%Report DVlog AlphaSat.ElapsedDays Vx1 Vy1 Vz1 Vx2 Vy2 Vz2 DeltaV;
+		
+
+
+
